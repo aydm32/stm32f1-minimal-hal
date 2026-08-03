@@ -1,10 +1,9 @@
 # STM32F103C8T6 Bare-Metal Peripheral Library
 
   A from-scratch peripheral driver library for the STM32F103C8T6 (Blue Pill),
-written in C without HAL, CubeMX, or any vendor abstraction layer.
+written in C.
 
-  Most STM32 tutorials rely on ST's HAL or CubeMX-generated code. This library
-goes directly to the registers — every peripheral is configured by reading the
+  This bare-metal library is configured by reading the
 reference manual and writing to memory-mapped I/O manually. This approach gives
 full control over timing, interrupt behavior, and memory layout, which is
 essential in resource-constrained embedded systems.
@@ -42,7 +41,6 @@ essential in resource-constrained embedded systems.
 - Build system: GNU Make
 - Flashing: `st-flash` (ST-Link v2)
 - OS: Void Linux (works on any Linux distro)
-- No IDE, no CubeMX, no HAL
 - Text Editor: Neovim (Lazyvim)
 
 ---
@@ -65,7 +63,7 @@ make clean  # clean build artifacts
 
 ---
 
-## Roadmap
+## Checklist
 
 - [x] GPIO driver (input, output, alternate function)
 - [x] RCC clock configuration
@@ -75,15 +73,6 @@ make clean  # clean build artifacts
 - [x] UART driver
 - [ ] Timer / PWM driver
 - [ ] I2C driver
-
----
-
-## Context
-
-This library is developed to build a solid bare-metal firmware foundation
-for embedded systems projects — starting with RF communication modules
-and extended to other famous modules, targeting flight controller hardware.
-Written entirely from reference manuals without vendor abstractions.
 
 ---
 
