@@ -35,7 +35,9 @@ void timer_init(TIMx_t *timer,timer_config cfg)
   timer->PSC = cfg.prescaler;
   // 3. Configure ARR
   timer->ARR = cfg.period;
-  // 4. Generate update event 
+  // 4. Reset the counter 
+  timer->CNT = 0; 
+  // 5. Generate update event 
   SET_BIT(timer->EGR, EGR_UG);
 }
 
@@ -50,6 +52,16 @@ void timer_stop(TIMx_t * timer)
 {
   // Disable counter 
   CLEAR_BIT(timer->CR1, CR1_CEN);
+}
+
+void timer_enable_interrupt(TIMx_t *timer)
+{
+  SET_BIT(timer->DIER, DIER_UIE);
+}
+
+void timer_disable_interrupt(TIMx_t *timer)
+{
+  CLEAR_BIT(timer->DIER, DIER_UIE);
 }
 
 void timer_set_callback(TIMx_t* timer,timer_callback_t callback)

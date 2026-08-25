@@ -36,6 +36,8 @@ typedef struct {
 
 #define SR_UIF BIT(0) // Update interrupt flag
 
+#define DIER_UIE BIT(0) // Update interrupt enable
+
 typedef void (*timer_callback_t)(void);
 
 typedef struct {

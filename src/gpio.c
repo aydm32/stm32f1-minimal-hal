@@ -22,3 +22,16 @@ void gpio_set(uint32_t pin, uint8_t state) {
 uint8_t gpio_read(uint32_t pin) {
   return (READ_BIT(GPIO(PINBANK(pin))->IDR, BIT(PINNO(pin))) != 0) ? HIGH : LOW;
 }
+
+void gpio_toggle(uint32_t pin)
+{
+  uint8_t state = gpio_read(pin);
+  
+ if(state == LOW)
+  {
+    gpio_set(pin,HIGH);
+  } else if(state == HIGH)
+  {
+    gpio_set(pin,LOW);
+  }
+}

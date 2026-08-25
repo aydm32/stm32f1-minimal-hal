@@ -35,4 +35,6 @@ void gpio_set_mode(uint32_t pin, uint8_t cnf, uint8_t mode);
 void gpio_set(uint32_t pin, uint8_t state);
 uint8_t gpio_read(uint32_t pin);
 
+void gpio_toggle(uint32_t pin);
+
 #endif // !GPIO_H
