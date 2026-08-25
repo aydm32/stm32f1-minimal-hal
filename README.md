@@ -18,7 +18,7 @@ essential in resource-constrained embedded systems.
 | RCC (clock configuration) | `src/rcc.c` | Complete |
 | SPI | `src/spi.c` | Complete |
 | UART | `src/uart.c` | Complete |
-| PWM  | — | Planned |
+| PWM  | src/timer.c | In progress |
 | I2C  | — | Planned |
 
 ---
