@@ -18,7 +18,7 @@ essential in resource-constrained embedded systems.
 | RCC (clock configuration) | `src/rcc.c` | Complete |
 | SPI | `src/spi.c` | Complete |
 | UART | `src/uart.c` | Complete |
-| PWM  | src/timer.c | In progress |
+| PWM  | `src/pwm.c`  | In progress |
 | I2C  | — | Planned |
 
 ---
@@ -78,6 +78,6 @@ make clean  # clean build artifacts
 
 ## Author
 
-Ayad Mohamed
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/mohamed-ayad-688269389/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BiOz%2BoE8YQy2uH4CehR4G7A%3D%3D)
+Mohamed Ayad
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/mohamed-ayad-863b00449/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3By9hqtjIqTbuYSSHZ1QFQDQ%3D%3D)
 [![GitHub](https://img.shields.io/badge/GitHub-black?logo=github)](https://github.com/aydm32)
