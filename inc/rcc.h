@@ -18,7 +18,7 @@ typedef struct {
 
 #define RCC ((RCC_t *)0x40021000UL)
 
-/* ── Peripheral clock enable bits (APB2ENR) ── */
+/* Peripheral clock enable bits (APB2ENR) */
 #define RCC_APB2ENR_IOPA BIT(2)    // GPIOA
 #define RCC_APB2ENR_IOPB BIT(3)    // GPIOB
 #define RCC_APB2ENR_IOPC BIT(4)    // GPIOC
@@ -61,7 +61,7 @@ typedef struct {
 #define RCC_APB1ENR_BKP BIT(27)    // Backup interface
 #define RCC_APB1ENR_PWR BIT(28)    // Power control
 
-/* ── CFGR bits used during clock configuration ── */
+/* CFGR bits used during clock configuration */
 #define RCC_CFGR_PLLSRC_HSE BIT(16)
 #define RCC_CFGR_PLLMUL9 (7UL << 18) // HSE(8MHz) * 9 = 72MHz
 #define RCC_CFGR_SW_PLL (2UL << 0)
@@ -69,7 +69,7 @@ typedef struct {
 #define RCC_CFGR_SWS_PLL (2UL << 2)
 #define RCC_CFGR_PPRE1_DIV2 (4UL << 8)
 
-/* ── Flash access control register (needed for wait states) ── */
+/* Flash access control register (needed for wait states) */
 #define FLASH_ACR (*(volatile uint32_t *)0x40022000UL)
 
 typedef enum {
