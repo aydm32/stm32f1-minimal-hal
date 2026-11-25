@@ -4,16 +4,16 @@
 #include <stdint.h>
 
 typedef struct {
-  volatile uint32_t CR;       // 0x00
-  volatile uint32_t CFGR;     // 0x04
-  volatile uint32_t CIR;      // 0x08
-  volatile uint32_t APB2RSTR; // 0x0C
-  volatile uint32_t APB1RSTR; // 0x10
-  volatile uint32_t AHBENR;   // 0x14
-  volatile uint32_t APB2ENR;  // 0x18
-  volatile uint32_t APB1ENR;  // 0x1C
-  volatile uint32_t BDCR;     // 0x20
-  volatile uint32_t CSR;      // 0x24
+  volatile uint32_t CR;
+  volatile uint32_t CFGR;
+  volatile uint32_t CIR;
+  volatile uint32_t APB2RSTR;
+  volatile uint32_t APB1RSTR;
+  volatile uint32_t AHBENR;
+  volatile uint32_t APB2ENR;
+  volatile uint32_t APB1ENR;
+  volatile uint32_t BDCR;
+  volatile uint32_t CSR;
 } RCC_t;
 
 #define RCC ((RCC_t *)0x40021000UL)
@@ -37,7 +37,7 @@ typedef struct {
 #define RCC_APB2ENR_TIM10 BIT(20)  // TIM10
 #define RCC_APB2ENR_TIM11 BIT(21)  // TIM11
 
-/* ── Peripheral clock enable bits (APB1ENR) ── */
+/* Peripheral clock enable bits (APB1ENR) */
 #define RCC_APB1ENR_TIM2 BIT(0)    // TIM2
 #define RCC_APB1ENR_TIM3 BIT(1)    // TIM3
 #define RCC_APB1ENR_TIM4 BIT(2)    // TIM4

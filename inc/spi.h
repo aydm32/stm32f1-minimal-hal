@@ -4,15 +4,15 @@
 #include <stdint.h>
 
 typedef struct {
-  volatile uint32_t CR1;     // 0x00
-  volatile uint32_t CR2;     // 0x04
-  volatile uint32_t SR;      // 0x08
-  volatile uint32_t DR;      // 0x0C
-  volatile uint32_t CRCPR;   // 0x10
-  volatile uint32_t RXCRCR;  // 0x14
-  volatile uint32_t TXCRCR;  // 0x18
-  volatile uint32_t I2SCFGR; // 0x1C
-  volatile uint32_t I2SPR;   // 0x20
+  volatile uint32_t CR1;
+  volatile uint32_t CR2;
+  volatile uint32_t SR;
+  volatile uint32_t DR;
+  volatile uint32_t CRCPR;
+  volatile uint32_t RXCRCR;
+  volatile uint32_t TXCRCR;
+  volatile uint32_t I2SCFGR;
+  volatile uint32_t I2SPR;
 } SPIx_t;
 
 #define SPI1 ((SPIx_t *)0x40013000UL)
@@ -63,7 +63,7 @@ typedef struct {
   uint8_t mode;      // 0,1,2,3 → CPOL/CPHA combination
   uint32_t baudrate; // use SPI_CR1_BR_DIVx defines
   uint8_t datasize;  // 8 or 16
-  uint32_t cs_pin;   // PIN('A', 4) etc — CS is now caller-configurable
+  uint32_t cs_pin;   // PIN('A', 4) etc
 } SPI_Config;
 
 void spi1_init(SPI_Config cfg);
