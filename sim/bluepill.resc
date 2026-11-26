@@ -1,0 +1,9 @@
+mach create "BluePill"
+
+machine LoadPlatformDescription @platforms/cpus/stm32f103.repl
+
+sysbus LoadELF $ORIGIN/../build/firmware.elf
+
+machine StartGdbServer 3333 
+
+start 
